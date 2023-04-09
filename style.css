@@ -6,7 +6,9 @@ body{
 header .hero{
   padding: 0;
   margin: 0;
-  background-color:#008CBA;
+ /* background-color:#008CBA;*/
+  background-image: url('https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size:cover;
   height: 5rem;
   width: 100vw;
 } 
@@ -96,11 +98,11 @@ h1 a:visited{
   }
 
   body {
-    /*background-image: url('https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');*/
-    background: linear-gradient(#dabdbd, #9198e5);
+/* background: linear-gradient(#dabdbd, #9198e5); */
+    background:linear-gradient(#bdc3c7,#2c3e50);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover;  
   }
   
 
