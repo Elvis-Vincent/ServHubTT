@@ -2,26 +2,29 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="app.css">
-  <title>ServHubTT</title>
+  <title>WeatherHub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <header>
     <section class="hero">
-        <header class="navbar">
-            <nav class="links">
-                <a href="index.html"><img src="images/logo.png" alt="ServHubLogo"></a>
-            </nav>
-        </header>
+      <h1><a href="weatherhub.html">WeatherHub</a></h1>
     </section>
-    
-    <div>
-      <input class="searchbar" type="search" id="searchKey" placeholder="Search">
-      <button class="searchbutton" onclick=search()>🔍</button>
-    </div> 
+  </header>
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Enter City Name">
+      <button id="search-button">🔍</button>
+    </div>
+    <div class="weather-box">
+      <div class="current-weather" id="current-weather"></div>
+      <div class="forecast" id="forecast"></div>
+    </div>
+  </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
