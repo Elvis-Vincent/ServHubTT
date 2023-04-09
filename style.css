@@ -98,8 +98,7 @@ h1 a:visited{
   }
 
   body {
-/* background: linear-gradient(#dabdbd, #9198e5); */
-    background:linear-gradient(#bdc3c7,#2c3e50);
+   background: linear-gradient(#dabdbd, #9198e5);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;  
