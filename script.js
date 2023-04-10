@@ -70,6 +70,6 @@ function search(location) {
     });
     $forecast.html(forecastHtml);
   }).fail(function() {
-    alert("An error occurred while retrieving weather data. Please try again.");
+    alert("Invalid City entered. Please try again.");
   });
 }
