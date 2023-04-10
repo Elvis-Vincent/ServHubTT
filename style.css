@@ -81,9 +81,9 @@ h1 a:visited{
     justify-content: space-around;   
     padding: 30 20px;
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 10vw;
     text-align: center;
-    line-height: 3rem;
+    line-height: 10vh;
   }
   
   .forecast-item {
