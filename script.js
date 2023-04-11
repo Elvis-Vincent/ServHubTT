@@ -132,7 +132,7 @@ function searchD(location) {
     let forecastHtml = "";
     forecastWeatherData.forEach(function(forecastItem) {
       const date = new Date(forecastItem.dt * 1000);
-      const dayOfWeek = date.toLocaleDateString("en-US", { weekday: "short" });
+      const dayOfWeek = date.toLocaleDateString("en-US", { weekday: "long" });
       forecastHtml += `
         <div class="forecast-item">
           <div class="day-of-week">${dayOfWeek}</div>
