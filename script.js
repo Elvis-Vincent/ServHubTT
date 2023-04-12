@@ -5,6 +5,7 @@ const BASE_URL = "https://api.openweathermap.org/data/2.5";
 // Select the relevant DOM elements
 const $searchInput = $("#search-input");
 const $searchButton = $("#search-button");
+const $tempButton = $("#temp");
 const $currentWeather = $("#current-weather");
 const $forecast = $("#forecast");
 
@@ -49,6 +50,24 @@ $searchInput.on("keyup", function(event) {
 
 
   }
+});
+
+// Add event listener to temperature button
+$tempButton.on("click", function() {
+  var box = document.getElementById("temp");
+  const location = $searchInput.val();
+   if (box.checked == false) {
+      if (location) {
+       //console.log("no");
+        searchF(location);
+      }
+    }
+    else {
+      //console.log("yes");
+      if (location) {
+        searchD(location);
+      }
+    }
 });
 
 
