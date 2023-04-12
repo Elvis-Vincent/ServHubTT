@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WeatherHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <section class="hero">
+      <h1><a href="index.html">WeatherHub</a></h1>
+    </section>
+  </header>
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Enter City Name">
+      <button id="search-button">🔍</button>
+      
+      <label class="switch">
+          <div class="button-cover">
+            <div class="button r" id="button-1">
+              <input type="checkbox" id="temp" />
+              <div class="knobs"></div>
+              <div class="layer"></div>
+          </div>
+        </div>
+      </label>
+   </div>
+    
+    <div class="weather-box">
+      <div class="current-weather" id="current-weather"></div>
+      <div class="forecast" id="forecast"></div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+        <p>WeatherHub provides global real-time weather information and forecasting with accurate and reliable data. Our dedicated team offers the best service to meet            the needs of weather enthusiasts and daily activity planners.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
