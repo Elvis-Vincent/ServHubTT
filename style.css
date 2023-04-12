@@ -1,15 +1,20 @@
 body{
-  margin-top: 0;
-  margin-left: 0;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 8rem;
+  background: linear-gradient(#dabdbd, #9198e5);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header .hero{
   padding: 0;
   margin: 0;
- /* background-color:#008CBA;*/
-  background-image: url('https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-image: url('images/bannerimg.png');
   background-size:cover;
-  height: 5rem;
+  height: 6rem;
   width: 100vw;
 } 
 
@@ -20,7 +25,7 @@ h1{
   font-size: 3rem;
   margin: 0;
   margin-left: 1rem;
-  padding: 0.5rem;
+  padding: 0.9rem;
 }
 
 h1 a{
@@ -39,6 +44,7 @@ h1 a:visited{
   .search-box {
     margin-top: 20px;
     display: flex;
+    position: static;
   }
   
   #search-input {
@@ -51,7 +57,7 @@ h1 a:visited{
   
   #search-button {
     padding: 5px 15px;
-    background-color: #008CBA;
+    background-color: #9198e5;
     color: #fff;
     border: none;
     font-size: 16px;
@@ -78,96 +84,145 @@ h1 a:visited{
     margin: 20px 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;   
     padding: 30 20px;
     text-transform: capitalize;
     font-size: 2rem;
     text-align: center;
     line-height: 3rem;
+    justify-content: space-around;   
   }
   
   .forecast-item {
     border: 1px solid #ccc;
-    padding: 50px;
+    padding: 50px 80px;
     width: calc(100% / 3 - 10px);
     border-radius: 3px;
   }
   
+  @media only screen and (max-device-width: 1500px){
+   .forecast {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media only screen and (max-width: 1500px){
+   .forecast {
+      flex-direction: column;
+      align-items: center;
+    }
+  }  
+
   .day-of-week {
     font-weight: 700;
   }
 
-  body {
-   background: linear-gradient(#dabdbd, #9198e5);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;  
-  }
-  
-
-
-   .switch {
+ .button-cover{
   position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+  right: 0px;
+  top: 20.5px;
 }
 
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-
- 
-.slider {
+.knobs,
+.layer {
   position: absolute;
-  cursor: pointer;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  left: 0;
 }
 
-.slider:before {
+.button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+#temp {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+#button-1 .knobs:before {
+  content: "°F";
   position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
+  top: 4px;
   left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
+  width: 20px;
+  height: 10px;
+  color: #000;
+  font-size: 15px; 
+  font-weight: 400;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px; 
+  background-color: #dabdbd;
   border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
+
+#button-1 #temp:checked + .knobs:before {
+  content: "°C";
+  left: 42px;
+  background-color: #9198e5;
+}
+
+#button-1 #temp:checked ~ .layer {
+  background-color: #fcebeb;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 8rem;
+  background-color:#000;
+  color: white;
+  font-size: 1.35rem;
+}
+
+.footer-content{
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 0;
+  padding-top: 40px;
+}
+  
+
   
 
   
