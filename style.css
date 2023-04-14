@@ -20,7 +20,6 @@ header .hero{
 
 h1{
   text-align: left;
-  color: #ccc;
   letter-spacing: 0.1rem;
   font-size: 3rem;
   margin: 0;
@@ -30,6 +29,7 @@ h1{
 
 h1 a{
 text-decoration: none;
+color: #ccc;
 }  
 
 h1 a:visited{
